@@ -5,6 +5,11 @@ public class StringUtils {
         if (str == null || str.length() == 0) {
             return false;
         }
-        return Double.parseDouble(str) > 0;
+        try {
+            double num = Double.parseDouble(str);
+            return num > 0;
+        } catch (NumberFormatException ex) {
+            return false;
+        }
     }
 }

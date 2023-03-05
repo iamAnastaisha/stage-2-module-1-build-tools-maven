@@ -8,8 +8,9 @@ public class Utils {
             return false;
         }
        for (String str : args) {
-           if (Integer.parseInt(str)  <= 0)
-               return true;
+           if (str == null || str.length() == 0 || Double.parseDouble(str)  <= 0) {
+               return false;
+           }
        }
        return false;
     }

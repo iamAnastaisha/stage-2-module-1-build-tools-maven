@@ -13,7 +13,7 @@ public class Utils {
            }
            try {
                double num = Double.parseDouble(str);
-               if (num <= 0)
+               if (num <= 0.)
                    return false;
            } catch (NumberFormatException ex) {
                return false;
